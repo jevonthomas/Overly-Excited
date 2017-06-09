@@ -10,9 +10,21 @@ function addExcitement (theWordArray) {
       outputs the words.
      */
 	var formedSentence = "";
+	var exclaim = ""
   for (var i = 0; i < sentence.length; i++) {
-  	formedSentence += (sentence[i]) + " ";
-  	console.log(formedSentence);
+		//If the current value of the counter variable can be evenly divided by 3 - 
+		//using the JavaScript remainder operator - 
+		//then add a single exclamation point (!) to the output.
+			//Add logic in the addExcitement function to the increase the number of exclamation points after every third word. 
+			//The number of exclamation points (!) will be determined by how many times the counter variable can be divided by 3.
+		if (i > 0 && (i + 1) % 3 === 0) {
+			exclaim += "!";
+			formedSentence += (sentence[i]) + exclaim + " ";
+			console.log(formedSentence);
+		} else {
+	  		formedSentence += (sentence[i] + " ");
+		  	console.log(formedSentence);
+  	}
   }
 }
 
